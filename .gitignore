@@ -1,0 +1,15 @@
+
+target/
+dbt_packages/
+logs/
+
+# dbt profiles & secrets
+profiles.yml
+.env
+
+# mac
+.DS_Store
+
+# python
+__pycache__/
+*.pyc

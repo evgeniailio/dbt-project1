@@ -1,0 +1,28 @@
+version: 2
+
+models: 
+  - name: stg_customers 
+    description: This model transforms the raw customer data into a structured format.
+    columns: 
+      - name: customer_id 
+        description: Unique identifier for each customer 
+        tests: 
+          - not_null
+          - unique 
+      - name: first_name 
+        description: Customer's first name 
+        tests: 
+          - not_null
+      - name: email 
+        description: User's email.
+        tests:
+          - not_null
+          - unique
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: '^.+@.+\..+$'
+    
+    loaded_at_field: loaded_at 
+
+    freshness:
+      warn_after: {count: 1, period: day}
+      error_after: {count: 2, period: day}

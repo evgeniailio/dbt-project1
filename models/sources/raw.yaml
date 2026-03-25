@@ -62,3 +62,190 @@ sources:
         freshness:
           warn_after: {count: 1, period: day}
           error_after: {count: 2, period: day}
+
+      - name: homescreen_seen
+        description: User sees home screen.
+        columns:
+          - name: event_id 
+            description: Unique event identifier.
+            tests: 
+              - unique 
+              - not_null 
+          - name: user_id 
+            description: User's id. 
+            tests: 
+              - not_null 
+          - name: user_email 
+            description: User's email.
+            tests: 
+              - not_null 
+          - name: plan_type_snapshot 
+            description: User's plan type the moment they triggered the event.
+            tests: 
+              - not_null
+          - name: device_type
+            description: User's device when triggering event.
+            tests: 
+              - not_null
+          - name: timestamp 
+            tests:
+              - not_null
+          - name: organisation_id
+            description: User's organisation id.
+            tests:
+              - not_null
+          - name: session_id
+            description: User's session id.
+            tests:
+              - not_null
+          - name: loaded_at
+            description: Last upload of data. 
+            tests: 
+              - not_null 
+        
+        loaded_at_field: loaded_at 
+  
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 2, period: day}
+      - name: report_initiated
+        description: User clicks to navigate to report creation.
+        columns:
+          - name: event_id 
+            description: Unique event identifier.
+            tests: 
+              - unique 
+              - not_null 
+          - name: user_id 
+            description: User's id. 
+            tests: 
+              - not_null 
+          - name: user_email 
+            description: User's email.
+            tests: 
+              - not_null 
+          - name: plan_type_snapshot 
+            description: User's plan type the moment they triggered the event.
+            tests: 
+              - not_null
+          - name: device_type
+            description: User's device when triggering event.
+            tests: 
+              - not_null
+          - name: timestamp 
+            tests:
+              - not_null
+          - name: organisation_id
+            description: User's organisation id.
+            tests:
+              - not_null
+          - name: session_id
+            description: User's session id.
+            tests:
+              - not_null
+          - name: loaded_at
+            description: Last upload of data. 
+            tests: 
+              - not_null 
+        
+        loaded_at_field: loaded_at 
+  
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 2, period: day}
+
+      - name: report_created
+        description: User creates first report.
+        columns:
+          - name: event_id 
+            description: Unique event identifier.
+            tests: 
+              - unique 
+              - not_null 
+          - name: user_id 
+            description: User's id. 
+            tests: 
+              - not_null 
+          - name: user_email 
+            description: User's email.
+            tests: 
+              - not_null 
+          - name: plan_type_snapshot 
+            description: User's plan type the moment they triggered the event.
+            tests: 
+              - not_null
+          - name: device_type
+            description: User's device when triggering event.
+            tests: 
+              - not_null
+          - name: timestamp 
+            tests:
+              - not_null
+          - name: organisation_id
+            description: User's organisation id.
+            tests:
+              - not_null
+          - name: session_id
+            description: User's session id.
+            tests:
+              - not_null
+          - name: loaded_at
+            description: Last upload of data. 
+            tests: 
+              - not_null 
+        
+        loaded_at_field: loaded_at 
+  
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 2, period: day}
+
+      - name: report_saved
+        description: User saves the report they created.
+        columns:
+          - name: event_id 
+            description: Unique event identifier.
+            tests: 
+              - unique 
+              - not_null 
+          - name: user_id 
+            description: User's id. 
+            tests: 
+              - not_null 
+          - name: user_email 
+            description: User's email.
+            tests: 
+              - not_null 
+          - name: plan_type_snapshot 
+            description: User's plan type the moment they triggered the event.
+            tests: 
+              - not_null
+          - name: device_type
+            description: User's device when triggering event.
+            tests: 
+              - not_null
+          - name: timestamp 
+            tests:
+              - not_null
+          - name: organisation_id
+            description: User's organisation id.
+            tests:
+              - not_null
+          - name: session_id
+            description: User's session id.
+            tests:
+              - not_null
+          - name: loaded_at
+            description: Last upload of data. 
+            tests: 
+              - not_null 
+        
+        loaded_at_field: loaded_at 
+  
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 2, period: day}
+
+
+    
+
